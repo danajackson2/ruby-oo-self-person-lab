@@ -1,3 +1,5 @@
+require 'pry'
+
 class Person
 
     attr_reader :name, :happiness, :hygiene
@@ -29,6 +31,26 @@ class Person
             @hygiene = 0
         end
     end
+
+    def clean?
+        @hygiene > 7? true : false
+    end
+
+    def happy?
+        @happiness > 7? true : false
+    end
+
+    def get_paid(salary)
+        @bank_account += salary
+        "all about the benjamins"
+    end
+
+    def take_bath
+        clean = @hygiene + 4
+        self.hygiene=(clean)
+        "♪ Rub-a-dub just relaxing in the tub ♫"
+    end
+
 
 
 
